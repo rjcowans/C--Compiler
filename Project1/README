@@ -1,0 +1,106 @@
+Richard Cowans
+Due Jan 31 2019
+Purpose and Explanation of Code
+---------------------------------------------------------------------------------------------
+Hello Professor, this project is performing the first part of the four compenments of a 
+Compiler. The first one that this project covers is the Lexical Analayzer. Basic work
+comes into play, upon reading through the file i am creating tokens based off of the book's
+version of delimitters, which if done correctly it strips comments and whitespace. Once 
+done this will lead into part two of the compiler for looking for the syntax. Thank you for 
+reading the description. The source files, input files, output files and execution will
+be specified below.
+---------------------------------------------------------------------------------------------
+
+Source
+------------------------------------------------------------------------------------------
+Main.py - this holds all the code to run the program
+------------------------------------------------------------------------------------------
+
+Input Files
+----------------------------------------------------------------------------------------
+[test.txt]
+i used a test file to check my work and called it "test.txt" it has the contents below
+
+int g 4 cd (int u, int v)      {
+if(v == >= 0) return/*a comment*/ u;
+else ret_urn gcd(vxxxxxxvvvvv, u-u/v*v);
+       /* u-u/v*v == u mod v*/
+!
+}
+----------------------------------------------------------------------------------------
+Output Files
+None Everything is going to console
+-----------------------------------------------------------------------------------------
+Projected Output
+Running
+
+Read
+Returning
+At the end
+INPUT:  int g 4 cd (int u, int v)      {
+Output:
+keyword : int
+ID : g
+int : 4
+ID : cd
+delimt : (
+keyword : int
+ID : u
+delimt : ,
+keyword : int
+ID : v
+delimt : )
+delimt : {
+INPUT:  if(v == >= 0) return/*a comment*/ u;
+Output:
+keyword : if
+delimt : (
+ID : v
+relop : ==
+relop : >=
+int : 0
+delimt : )
+keyword : return
+ID : u
+delimt : ;
+INPUT:  else ret_urn gcd(vxxxxxxvvvvv, u-u/v*v);
+Output:
+keyword : else
+ID : ret
+Error : _
+ID : urn
+ID : gcd
+delimt : (
+ID : vxxxxxxvvvvv
+delimt : ,
+ID : u
+mathop : -
+ID : u
+mathop : /
+ID : v
+mathop : *
+ID : v
+delimt : )
+delimt : ;
+INPUT:  /* u-u/v*v == u mod v*/
+Output:
+INPUT:  !
+Output:
+Error : !
+INPUT:  }
+Output:
+delimt : }
+Error : }
+
+Done
+
+-----------------------------------------------------------------------------------------
+
+Execution: the shar would be named Proj1
+Step 1: unshar Proj1
+
+#This can be any testfile but for the example i used test.txt
+
+Step 2: p1 test.txt
+
+-----------------------------------------------------------------------------------------

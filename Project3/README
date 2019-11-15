@@ -1,0 +1,58 @@
+Project 3
+Owner Richard Cowans
+Student Number: n01222478
+Due Date April 4, 2019
+
+
+Project Description:
+---------------------------------------------------------------------------------------------------------
+Hello Professor this project is a continuation of the the first and second and third componemt of a four
+part compiler. As you would already: First part - Lexer, Second part - Parser, Third part - Semantic 
+Parser. This projects goes through the text file as it Parses it and reads checks if it is semantically
+correct according to the semantic of the book. Examples of semantic checks: no void word declaration
+,proper type checking like only int to int , and no void to void. proper returns. These checks is one
+of the few that are required for the finishing part of the the compilers which will be the Code 
+Generation. The program should return a statement that is either "ACCEPT" or "REJECT"
+----------------------------------------------------------------------------------------------------------
+
+Source Files
+----------------------------------------------------------------------------------------------------------
+Main2.py - this holds the driver code to run the grammar and tokenizer as well as the semantics
+grammar.py - recursive decent parser with semantic checks built in
+----------------------------------------------------------------------------------------------------------
+
+Input Files
+----------------------------------------------------------------------------------------------------------
+[test.txt]
+int z[10];
+int foo(int gank){ return 5;}
+void main (void){
+int x;
+x = foo(5) + 5;
+}
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+Output Files
+None everything is going to console
+----------------------------------------------------------------------------------------------------------
+
+Projected Output:
+
+ACCEPT
+
+----------------------------------------------------------------------------------------------------------
+
+Execution: the shar would be named Proj3 with testfile named myint z[10];
+int foo(int gank){ return 5;}
+void main (void){
+int x;
+x = foo(5) + 5;
+}
+test.txt
+
+Step 1: unshar Proj3
+Step 2: make
+Step 3: p3 mytest.txt
+
+---------------------------------------------------------------------------------------------------------

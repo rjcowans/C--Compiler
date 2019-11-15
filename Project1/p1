@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ ! -z "$1" ]; then
+	#echo "Running"
+	#echo " "
+	python3.6 Main.py $1
+	#echo " "
+	#echo "Done"
+else
+	echo "No test file to run please try again"
+	echo "Exiting Fail status"
+fi
+

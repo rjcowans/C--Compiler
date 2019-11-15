@@ -1,0 +1,16 @@
+int sub(int z)
+{
+   int x;
+   int y;
+   if (x > y){
+      y = x * (2 + 2) * x * 8;
+      return(z+z);
+      }
+}
+void main(void)
+{
+  int x;
+  int y;
+  x = 2 * 2 + 3 + 5;
+  y = sub(x);
+}

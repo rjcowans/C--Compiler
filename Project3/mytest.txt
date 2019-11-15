@@ -1,0 +1,7 @@
+int z[10];
+int foo(int gank){ return 5;}
+void main (void){
+int x;
+x = foo(5) + 5;
+}
+

@@ -1,0 +1,48 @@
+Name: Richard Cowans
+Project 2
+Class: Compilers
+Professor Eggen Class
+Due Date: Feb 28 2019
+
+Project Description:
+-----------------------------------------------------------------------------------------------------
+Hello Professor this project is performing the first and second parts of the four compenments of a
+Compilers. The first one is the Lexical Analayzer where it tokenize the input file and then it feeds
+it into the second compenment of a Compilers. The Syntaxical Analayzer that checks to make sure the
+token arrangements match the Context Free Grammar that was organized and checked for C-. This will be 
+helpful in using the program to  feed into the semantic analayzer. The project should return a print
+statement of "ACCEPT" or "REJECT"
+-----------------------------------------------------------------------------------------------------
+
+Source Files
+----------------------------------------------------------------------------------------------------
+Main2.py - this holds the driver code to run the grammar and tokenizer
+grammar.py - this holds the recursive decent program that checks to see if it matchs the CFG
+----------------------------------------------------------------------------------------------------
+
+Input Files
+--------------------------------------------------------------------------------------------------
+[test.txt]
+void main(void){
+output(gcd(x,y));
+}
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Output Files
+None everything is going to console
+--------------------------------------------------------------------------------------------------
+
+Projected Output:
+
+ACCEPT
+
+-------------------------------------------------------------------------------------------------
+
+Execution: the shar would be named Proj2 name of file is test.txt
+
+Step 1: unshar Proj2
+Step 2: Makefile
+Step 3: p2 test.txt
+
+-------------------------------------------------------------------------------------------------

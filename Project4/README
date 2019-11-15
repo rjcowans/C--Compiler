@@ -1,0 +1,94 @@
+Project4
+Owner Richard Cowans
+Student Number: n01222478
+Due Date April 4, 2019
+
+
+Project Description:
+---------------------------------------------------------------------------------------------------------
+Hello Professor this project is a final peice of te four componment compiler. As you would already: First 
+part - Lexer, Second part - Parser, Third part - Semantic Parser and the Final part that i fiinshed. 
+This projects goes through the text file as it Parses it and reads checks if it is semantically
+correct according to the semantic of the book and then generates what we call Intermeidate Code.The
+program is expected to print out all action in what the class calls Quadruple format. This will be shown
+in the the Projected Output below. Be advised im projecting to not get anything higher than a 20 since i
+do not feel this is trully 100%. Thank you
+----------------------------------------------------------------------------------------------------------
+
+Source Files
+----------------------------------------------------------------------------------------------------------
+Main2.py - this holds the driver code to run the grammar and tokenizer as well as the semantics
+grammar.py - recursive decent parser with semantic checks and half of the instruction to wirte
+Instruction_Writer.y -segmented way of right the code gen to the console
+Trees.py - file to help go down the the nodes for arthemetic expression 
+----------------------------------------------------------------------------------------------------------
+
+Input Files
+----------------------------------------------------------------------------------------------------------
+[test2.txt]
+int sub(int z)
+{
+   int x;
+   int y;
+   if (x > y){
+      y = x * (2 + 2) * x * 8;
+      return(z+z);
+      }
+}
+void main(void)
+{
+  int x;
+  int y;
+  x = 2 * 2 + 3 + 5;
+  y = sub(x);
+}
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+Output Files
+None everything is going to console
+----------------------------------------------------------------------------------------------------------
+
+Projected Output:
+
+Line #    Instruct       OP1       OP2       Target    BACKPATCH
+0         START          PROGRAM
+1         FUNC           sub       int       1
+2         PARAM                              z
+3         ALLOC          4                   z
+4         ALLOC          4                   x
+5         ALLOC          4                   y
+6         COMP           x         y         _t0
+7         BRGRE          _t0                 9         selctbin: 9
+8         BR                                 18
+9         BLOCK
+10        ADD            2         2         _t1
+11        MUL            x         _t1       _t2
+12        MUL            _t2       x         _t3
+13        MUL            _t3       8         _t4
+14        ASSIGN         _t4                 y
+15        ADD            z         z         _t5
+16        RETURN                             _t5
+17        END            BLOCK
+18        END            func      sub
+19        FUNC           main      void      0
+20        ALLOC          4                   x
+21        ALLOC          4                   y
+22        MUL            2         2         _t6
+23        ADD            _t6       3         _t7
+24        ADD            _t7       5         _t8
+25        ASSIGN         _t8                 x
+26        ARGS                               x
+27        CALL           sub       1         _t9
+28        ASSIGN         _t9                 y
+29        END            func      main
+30        END            PROGRAM
+----------------------------------------------------------------------------------------------------------
+
+Execution: the shar would be named Proj4 with testfile named test2.txt 
+
+Step 1: unshar Proj3
+Step 2: make
+Step 3: p4 mytest.txt
+
+---------------------------------------------------------------------------------------------------------
